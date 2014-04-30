@@ -26,7 +26,13 @@ object Application extends Controller {
    * Home page
    */
   def index = Action {
-    Ok(html.index(helloForm))
+    val randomNumber = new scala.util.Random.nextInt
+    val pageTitle = if (randomNumber % 2 == 0) {
+      "Even Number"
+    } else {
+      "Odd Number"
+    } 
+    Ok(html.index(pageTitle, helloForm))
   }
 
   /**
