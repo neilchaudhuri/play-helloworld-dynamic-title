@@ -39,4 +39,8 @@ object Application extends Controller {
     )
   }
 
+  def helloAgain = Action {
+    Ok(html.helloAgain("...any title you want..."))
+  }
+
 }
