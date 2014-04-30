@@ -1,8 +1,8 @@
-@(helloForm: Form[(String,String,Int,Option[String])])
+@(pageTitle: String, helloForm: Form[(String,String,Int,Option[String])])
 
 @import helper._
 
-@main(title = "The 'helloworld' application") {
+@main(title = pageTitle) {
 
     <h1>Configure your 'Hello world':</h1>
 
